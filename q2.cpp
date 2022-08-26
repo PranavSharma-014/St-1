@@ -35,7 +35,7 @@ int main()
 	if(areConsecutive(arr, n) == true)
 		cout<<"The array contains consecutive integers from "<<arr[0]<<" to "<<arr[n-1]<<endl;
 	else
-		cout<<"The array does not contain consecutive integers as element"<<endl;
+		cout<<"The array does not contain consecutive integers as element "<<arr[n-1]<<" is repeated"<<endl;
 
     return 0;
 
