@@ -39,6 +39,7 @@ int findMinIndex(int arr[], int n)
  
 int main()
 {
+    
     int arr[] = { 5, 6, 3, 4, 3, 6, 4 };
     // int arr[] = { 1, 2, 3, 4, 5, 6 };
  
