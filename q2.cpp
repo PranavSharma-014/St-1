@@ -6,22 +6,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Function to Check if array elements are consecutive
-
-bool areConsecutive(int arr[], int n)
+int areConsecutive(int arr[], int n)
 {
-    //Sort the array
-	sort(arr,arr+n);
 
-    // checking the adjacent elements
 	for(int i=1;i<n;i++)
 	{
 		if(arr[i]!=arr[i-1]+1)
 		{
-			return false;
+			return arr[i];
 		}
 	}
-	return true;
+	return -1;
 }
 
 
@@ -40,10 +35,12 @@ int main()
     // int arr[]={4,2,4,3,1};
 
     int n = sizeof(arr)/sizeof(arr[0]);
-	if(areConsecutive(arr, n) == true)
+	sort(arr,arr+n);
+	int res=areConsecutive(arr, n);
+	if(res==-1)
 		cout<<"The array contains consecutive integers from "<<arr[0]<<" to "<<arr[n-1]<<endl;
 	else
-		cout<<"The array does not contain consecutive integers as element "<<arr[n-1]<<" is repeated"<<endl;
+		cout<<"The array does not contain consecutive integers as element "<<res<<" is repeated"<<endl;
 
     return 0;
 
